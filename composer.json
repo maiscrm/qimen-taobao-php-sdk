@@ -1,0 +1,22 @@
+{
+    "name": "maiscrm/qimen-taobao-php-sdk",
+    "description": "qimen taobao openapi SDK for PHP",
+    "keywords": ["taobao", "qimen", "sdk" ],
+    "type": "library",
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "Lorne Qi",
+            "homepage": "https://www.maiscrm.com/"
+        }
+    ],
+    "require": {
+        "php": ">=5.5.0"
+    },
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "Qimen\\": "qimen/"
+        }
+    }
+}
