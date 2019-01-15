@@ -1,5 +1,5 @@
 <?php
-namespace qimen;
+namespace Qimen;
 
 /**
  * 返回的默认类

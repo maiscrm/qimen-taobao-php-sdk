@@ -2,52 +2,47 @@
 namespace Qimen\request;
 
 /**
- * TOP API: qimen.taobao.crm.order.detail.get request
+ * TOP API: qimen.taobao.crm.order.returndetail.get request
  *
  * @author auto create
  * @since 1.0, 2018.12.28
  */
-class TaobaoCrmOrderDetailGetRequest
+class TaobaoCrmOrderReturndetailGetRequest
 {
 	/**
-	 * 查询结束时间： 2000-11-30 23:59:59
+	 * 退单列表修改时间的结束时间，格式为 2013-11-12 12:00:00
 	 **/
 	private $endModified;
 
 	/**
-	 * 扩展属性
+	 * 扩展字段
 	 **/
 	private $extendProps;
 
 	/**
-	 * 支持的传入字段：order_id,order_sn,deal_code,pay_status,order_status,shipping_status,lylx,shipping_code,shipping_sn,shipping_fee,sd_id,lastchanged,is_split,split_new_orders,is_combine,combine_new_orders,order_msg,fhck_id,shipping_time_fh,qd_id,tbfx_id,ori_deal_code,user_name,receiver_name,receiver_address,receiver_tel,receiver_mobile,shipping_name,seller_msg,weigh,goods_sn,sku,color_id,size_id,goods_number,brand_id
-	 **/
-	private $fields;
-
-	/**
-	 * 订单编号
-	 **/
-	private $orderSn;
-
-	/**
-	 * 页码: 取值范围:大于零的整数; 默认值:1
+	 * 页数
 	 **/
 	private $pageNo;
 
 	/**
-	 * 每页条数。取值范围:大于零的整数; 默认值:20;最大值:100
+	 * 页码
 	 **/
 	private $pageSize;
 
 	/**
-	 * 店铺代码
+	 * E3退单编号
+	 **/
+	private $returnOrderSn;
+
+	/**
+	 * E3商店编码
 	 **/
 	private $sdCode;
 
 	/**
-	 * 查询起始时间： 2011-09-01 00:00:00
+	 * 退单列表修改时间开始时间，格式为  2013-11-12 12:00:00
 	 **/
-    private $startModified;
+	private $startModified;
 
 	private $apiParas = array();
 
@@ -73,28 +68,6 @@ class TaobaoCrmOrderDetailGetRequest
 		return $this->extendProps;
 	}
 
-	public function setFields($fields)
-	{
-		$this->fields = $fields;
-		$this->apiParas["fields"] = $fields;
-	}
-
-	public function getFields()
-	{
-		return $this->fields;
-	}
-
-	public function setOrderSn($orderSn)
-	{
-		$this->orderSn = $orderSn;
-		$this->apiParas["orderSn"] = $orderSn;
-	}
-
-	public function getOrderSn()
-	{
-		return $this->orderSn;
-	}
-
 	public function setPageNo($pageNo)
 	{
 		$this->pageNo = $pageNo;
@@ -115,6 +88,17 @@ class TaobaoCrmOrderDetailGetRequest
 	public function getPageSize()
 	{
 		return $this->pageSize;
+	}
+
+	public function setReturnOrderSn($returnOrderSn)
+	{
+		$this->returnOrderSn = $returnOrderSn;
+		$this->apiParas["return_order_sn"] = $returnOrderSn;
+	}
+
+	public function getReturnOrderSn()
+	{
+		return $this->returnOrderSn;
 	}
 
 	public function setSdCode($sdCode)
@@ -141,8 +125,8 @@ class TaobaoCrmOrderDetailGetRequest
 
 	public function getApiMethodName()
 	{
-		return "taobao.crm.order.detail.get";
-    }
+		return "taobao.crm.order.returndetail.get";
+	}
 
 	public function getApiParas()
 	{
@@ -153,15 +137,11 @@ class TaobaoCrmOrderDetailGetRequest
 	{
 
 		RequestCheckUtil::checkNotNull($this->endModified,"endModified");
-		RequestCheckUtil::checkMaxLength($this->endModified,64,"endModified");
-		RequestCheckUtil::checkNotNull($this->fields,"fields");
-		RequestCheckUtil::checkMaxLength($this->fields,255,"fields");
-		RequestCheckUtil::checkMaxLength($this->orderSn,64,"orderSn");
 		RequestCheckUtil::checkNotNull($this->pageNo,"pageNo");
 		RequestCheckUtil::checkNotNull($this->pageSize,"pageSize");
+		RequestCheckUtil::checkMaxLength($this->returnOrderSn,64,"returnOrderSn");
 		RequestCheckUtil::checkMaxLength($this->sdCode,64,"sdCode");
 		RequestCheckUtil::checkNotNull($this->startModified,"startModified");
-		RequestCheckUtil::checkMaxLength($this->startModified,64,"startModified");
 	}
 
 	public function putOtherTextParam($key, $value) {

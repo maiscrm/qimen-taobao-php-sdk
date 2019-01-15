@@ -1,5 +1,5 @@
 <?php
-namespace qimen;
+namespace Qimen;
 
 class TopLogger
 {

@@ -1,5 +1,5 @@
 <?php
-namespace qimen\request;
+namespace Qimen\request;
 
 use \Exception;
 
