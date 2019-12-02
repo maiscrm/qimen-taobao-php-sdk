@@ -10,6 +10,11 @@ namespace Qimen\request;
 class TaobaoCrmOrderDetailGetRequest
 {
 	/**
+	 * 路由参数
+	 **/
+	private $customerid;
+
+	/**
 	 * 查询结束时间： 2000-11-30 23:59:59
 	 **/
 	private $endModified;
@@ -50,6 +55,17 @@ class TaobaoCrmOrderDetailGetRequest
     private $startModified;
 
 	private $apiParas = array();
+
+	public function setCustomerid($customerid)
+	{
+		$this->customerid = $customerid;
+		$this->apiParas["customerid"] = $customerid;
+	}
+
+	public function getCustomerid()
+	{
+		return $this->customerid;
+	}
 
 	public function setEndModified($endModified)
 	{
