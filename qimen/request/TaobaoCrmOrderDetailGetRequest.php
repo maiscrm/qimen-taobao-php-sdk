@@ -54,12 +54,12 @@ class TaobaoCrmOrderDetailGetRequest
      **/
     private $startModified;
 
-    private $apiParas = array();
+    private $apiParas = [];
 
     public function setCustomerid($customerid)
     {
         $this->customerid = $customerid;
-        $this->apiParas["customerid"] = $customerid;
+        $this->apiParas['customerid'] = $customerid;
     }
 
     public function getCustomerid()
@@ -70,7 +70,7 @@ class TaobaoCrmOrderDetailGetRequest
     public function setEndModified($endModified)
     {
         $this->endModified = $endModified;
-        $this->apiParas["endModified"] = $endModified;
+        $this->apiParas['endModified'] = $endModified;
     }
 
     public function getEndModified()
@@ -81,7 +81,7 @@ class TaobaoCrmOrderDetailGetRequest
     public function setExtendProps($extendProps)
     {
         $this->extendProps = $extendProps;
-        $this->apiParas["extendProps"] = $extendProps;
+        $this->apiParas['extendProps'] = $extendProps;
     }
 
     public function getExtendProps()
@@ -92,7 +92,7 @@ class TaobaoCrmOrderDetailGetRequest
     public function setFields($fields)
     {
         $this->fields = $fields;
-        $this->apiParas["fields"] = $fields;
+        $this->apiParas['fields'] = $fields;
     }
 
     public function getFields()
@@ -103,7 +103,7 @@ class TaobaoCrmOrderDetailGetRequest
     public function setOrderSn($orderSn)
     {
         $this->orderSn = $orderSn;
-        $this->apiParas["orderSn"] = $orderSn;
+        $this->apiParas['orderSn'] = $orderSn;
     }
 
     public function getOrderSn()
@@ -114,7 +114,7 @@ class TaobaoCrmOrderDetailGetRequest
     public function setPageNo($pageNo)
     {
         $this->pageNo = $pageNo;
-        $this->apiParas["pageNo"] = $pageNo;
+        $this->apiParas['pageNo'] = $pageNo;
     }
 
     public function getPageNo()
@@ -125,7 +125,7 @@ class TaobaoCrmOrderDetailGetRequest
     public function setPageSize($pageSize)
     {
         $this->pageSize = $pageSize;
-        $this->apiParas["pageSize"] = $pageSize;
+        $this->apiParas['pageSize'] = $pageSize;
     }
 
     public function getPageSize()
@@ -136,7 +136,7 @@ class TaobaoCrmOrderDetailGetRequest
     public function setSdCode($sdCode)
     {
         $this->sdCode = $sdCode;
-        $this->apiParas["sd_code"] = $sdCode;
+        $this->apiParas['sd_code'] = $sdCode;
     }
 
     public function getSdCode()
@@ -147,7 +147,7 @@ class TaobaoCrmOrderDetailGetRequest
     public function setStartModified($startModified)
     {
         $this->startModified = $startModified;
-        $this->apiParas["startModified"] = $startModified;
+        $this->apiParas['startModified'] = $startModified;
     }
 
     public function getStartModified()
@@ -157,7 +157,7 @@ class TaobaoCrmOrderDetailGetRequest
 
     public function getApiMethodName()
     {
-        return "taobao.crm.order.detail.get";
+        return 'taobao.crm.order.detail.get';
     }
 
     public function getApiParas()
@@ -167,16 +167,16 @@ class TaobaoCrmOrderDetailGetRequest
 
     public function check()
     {
-        RequestCheckUtil::checkNotNull($this->endModified,"endModified");
-        RequestCheckUtil::checkMaxLength($this->endModified,64,"endModified");
-        RequestCheckUtil::checkNotNull($this->fields,"fields");
-        RequestCheckUtil::checkMaxLength($this->fields,255,"fields");
-        RequestCheckUtil::checkMaxLength($this->orderSn,64,"orderSn");
-        RequestCheckUtil::checkNotNull($this->pageNo,"pageNo");
-        RequestCheckUtil::checkNotNull($this->pageSize,"pageSize");
-        RequestCheckUtil::checkMaxLength($this->sdCode,64,"sdCode");
-        RequestCheckUtil::checkNotNull($this->startModified,"startModified");
-        RequestCheckUtil::checkMaxLength($this->startModified,64,"startModified");
+        RequestCheckUtil::checkNotNull($this->endModified, 'endModified');
+        RequestCheckUtil::checkMaxLength($this->endModified,64, 'endModified');
+        RequestCheckUtil::checkNotNull($this->fields, 'fields');
+        RequestCheckUtil::checkMaxLength($this->fields,255, 'fields');
+        RequestCheckUtil::checkMaxLength($this->orderSn,64, 'orderSn');
+        RequestCheckUtil::checkNotNull($this->pageNo, 'pageNo');
+        RequestCheckUtil::checkNotNull($this->pageSize, 'pageSize');
+        RequestCheckUtil::checkMaxLength($this->sdCode,64, 'sdCode');
+        RequestCheckUtil::checkNotNull($this->startModified, 'startModified');
+        RequestCheckUtil::checkMaxLength($this->startModified,64, 'startModified');
     }
 
     public function putOtherTextParam($key, $value)
