@@ -168,15 +168,15 @@ class TaobaoCrmOrderDetailGetRequest
     public function check()
     {
         RequestCheckUtil::checkNotNull($this->endModified, 'endModified');
-        RequestCheckUtil::checkMaxLength($this->endModified,64, 'endModified');
+        RequestCheckUtil::checkMaxLength($this->endModified, 64, 'endModified');
         RequestCheckUtil::checkNotNull($this->fields, 'fields');
-        RequestCheckUtil::checkMaxLength($this->fields,255, 'fields');
-        RequestCheckUtil::checkMaxLength($this->orderSn,64, 'orderSn');
+        RequestCheckUtil::checkMaxLength($this->fields, 255, 'fields');
+        RequestCheckUtil::checkMaxLength($this->orderSn, 64, 'orderSn');
         RequestCheckUtil::checkNotNull($this->pageNo, 'pageNo');
         RequestCheckUtil::checkNotNull($this->pageSize, 'pageSize');
-        RequestCheckUtil::checkMaxLength($this->sdCode,64, 'sdCode');
+        RequestCheckUtil::checkMaxLength($this->sdCode, 64, 'sdCode');
         RequestCheckUtil::checkNotNull($this->startModified, 'startModified');
-        RequestCheckUtil::checkMaxLength($this->startModified,64, 'startModified');
+        RequestCheckUtil::checkMaxLength($this->startModified, 64, 'startModified');
     }
 
     public function putOtherTextParam($key, $value)
@@ -185,3 +185,4 @@ class TaobaoCrmOrderDetailGetRequest
         $this->$key = $value;
     }
 }
+
