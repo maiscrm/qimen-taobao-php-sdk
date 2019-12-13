@@ -10,6 +10,11 @@ namespace Qimen\request;
 class TaobaoCrmOrderReturndetailGetRequest
 {
 	/**
+     * 路由参数
+     **/
+	 private $customerid;
+
+	/**
 	 * 退单列表修改时间的结束时间，格式为 2013-11-12 12:00:00
 	 **/
 	private $endModified;
@@ -45,6 +50,17 @@ class TaobaoCrmOrderReturndetailGetRequest
 	private $startModified;
 
 	private $apiParas = array();
+
+	public function setCustomerid($customerid)
+    {
+        $this->customerid = $customerid;
+        $this->apiParas['customerid'] = $customerid;
+    }
+
+    public function getCustomerid()
+    {
+        return $this->customerid;
+    }
 
 	public function setEndModified($endModified)
 	{
