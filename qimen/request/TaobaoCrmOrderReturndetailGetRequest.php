@@ -10,8 +10,8 @@ namespace Qimen\request;
 class TaobaoCrmOrderReturndetailGetRequest
 {
 	/**
-     * 路由参数
-     **/
+	 * 路由参数
+	 **/
 	 private $customerid;
 
 	/**
@@ -52,15 +52,15 @@ class TaobaoCrmOrderReturndetailGetRequest
 	private $apiParas = array();
 
 	public function setCustomerid($customerid)
-    {
-        $this->customerid = $customerid;
-        $this->apiParas['customerid'] = $customerid;
-    }
+	{
+		$this->customerid = $customerid;
+		$this->apiParas['customerid'] = $customerid;
+	}
 
-    public function getCustomerid()
-    {
-        return $this->customerid;
-    }
+	public function getCustomerid()
+	{
+		return $this->customerid;
+	}
 
 	public function setEndModified($endModified)
 	{
